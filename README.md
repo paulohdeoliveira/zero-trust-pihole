@@ -1,6 +1,6 @@
-# Pi-hole & SSH via Tor v3 Autenticado
+## Pi-hole & SSH via Tor v3 Autenticado
 
-Este repositório documenta a arquitetura de segurança multicamadas (Defense in Depth) aplicada a um Raspberry Pi local, permitindo acesso administrativo (Painel Web e SSH) de qualquer lugar do mundo de forma anônima, criptografada e matematicamente oculta da internet pública.
+Este repositório documenta a arquitetura de segurança multicamadas (Defense in Depth) aplicada a um Raspberry Pi local, permitindo acesso administrativo (Painel Web e SSH) de qualquer lugar do mundo de forma anônima e segura.
 
 ##  Arquitetura de Segurança
 * **Perímetro:** Firewall UFW bloqueando 100% das conexões de entrada externas.
@@ -93,5 +93,5 @@ Para garantir que a chave não fique salva na máquina e suma após um **F5**, a
 3. Altere o valor para **`false`**.
 
 ---
-## Manutenção e Atualizações Automáticas
+### Manutenção e Atualizações Automáticas
 O servidor mitiga riscos de Zero-Days em softwares internos através do pacote `unattended-upgrades`, aplicando patches de segurança do Debian de forma automatizada.
