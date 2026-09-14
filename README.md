@@ -95,3 +95,13 @@ Para garantir que a chave não fique salva na máquina e suma após um **F5**, a
 ---
 ### Manutenção e Atualizações Automáticas
 O servidor mitiga riscos de Zero-Days em softwares internos através do pacote `unattended-upgrades`, aplicando patches de segurança do Debian de forma automatizada.
+
+### Acesso SSH via onion
+```
+# Registrar a chave privada do onion no SSH
+sudo nano /var/lib/tor/onion_auth/pihole.auth_private
+<seu_link_onion_sem_o_.onion>:descriptor:x25519:<sua_chave_privada>
+
+# Conexão SSH
+ssh -i ~/.ssh/id_ed25519 -o ProxyCommand="nc -X 5 -x 127.0.0.1:9050 %h %p" usuario@seu_endereco_longo.onion
+```
